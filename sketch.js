@@ -1,7 +1,7 @@
 //필요한 변수들 설정 및 선언
 let rad = 30;  //입자 반지름
 let pos = [0,0];  //위치
-let vel = [20,-5];  //속도
+let vel = [30,-10];  //속도
 let acc = [0,0.8];  //가속도
 let accZero = [acc[0],acc[1]];  //가속도 초기값 저장
 let e = 0.5;  //반발 계수
@@ -13,12 +13,13 @@ function setup() {
 	createCanvas(windowWidth, windowHeight);  //화면 크기
 	ellipseMode(RADIUS);  //반지름을 기준으로 타원그리기
 	pos[0] = windowWidth/4;  //x의 초기값
-  pos[1] = windowHeight/5;  //y의 초기값	
+  	pos[1] = windowHeight/5;  //y의 초기값	
+	background(100);  //배경 색
 }
 
 //반복적 작동 부분
 function draw() {
-	background(100);  //배경 색	
+	// background(100);  //배경 색	
 	//move() 모드 선택 : 0보다 크면 반사(1에서 반사만), 2에서는 마찰, 3에서는 마찰+저항 작용
 	move(3);  
 }
